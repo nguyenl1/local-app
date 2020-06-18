@@ -14,7 +14,29 @@ HEADERS = {'Authorization':'bearer %s' % API_KEY}
 
 
 def alamosquare (request):
-    pass 
+        #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def bernalheights (request):
     pass 

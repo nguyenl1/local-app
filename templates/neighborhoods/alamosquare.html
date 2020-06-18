@@ -2,13 +2,15 @@
 
 {% block content %}
 
-<h2>Sunset District</h2>
+<h2>Alamo Square</h2>
 
 <div class="restaurants">
     {% for data in business_data%}
         <ul>
             <li><h4> {{ data.name }}</h4> <br>
-                <img src="{{ data.image_url }}"/>
+                
+                    <img src="{{ data.image_url }}" style="width: 200px;height:200px;"/>
+                
             </li>
         </ul>
     {% endfor %}
