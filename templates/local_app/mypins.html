@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+    <h2> My Pins </h2>
+
+    <hr>
+    
+    {% for pin in pins %}
+        <ul>
+            <li>
+                {{ pin.name }}
+                
+            </li>
+        </ul>
+    {% endfor %}
+
+
+{% endblock %}
