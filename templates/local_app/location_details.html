@@ -2,8 +2,12 @@
 
 {% block content %}
 
-<h2> {{ parsed.name }} </h2>
+<h2> {{ biz.name }} </h2>
 
-<p> {{parsed.location }} </p>
+<p> {{ biz.location }} </p>
+
+    <a href="{% url 'save_location' biz.id %}" class="btn btn-danger" role="button" aria-pressed="true">Save Location</a>
+
+    <a href="{% url 'add_trip' desp.id %}" class="btn btn-success" role="button" aria-pressed="true"> Add To My Trips </a>
 
 {% endblock %}
