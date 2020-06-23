@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="POST">
+
+    <h2> My Library </h2>
+
+    <hr>
+    
+    {% for pin in pins %}
+        <ul>
+            <li>
+                {{ pin.name }}
+                
+            </li>
+        </ul>
+    {% endfor %}
+    
+</div>
+
+{% endblock %}

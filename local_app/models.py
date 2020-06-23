@@ -3,5 +3,8 @@ from django.conf import settings
 from django.utils import timezone
 from django.contrib.auth import get_user_model
 
-class User(models.Model):
+class SavedPins(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, null=True)
+    bus_id = models.CharField(max_length = 200)
+    name = models.CharField(max_length = 200)
+    address = models.CharField(max_length = 200)

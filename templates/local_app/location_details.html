@@ -4,10 +4,20 @@
 
 <h2> {{ biz.name }} </h2>
 
-<p> {{ biz.location }} </p>
+{% for photos in biz.photos %}
 
-    <a href="{% url 'save_location' biz.id %}" class="btn btn-danger" role="button" aria-pressed="true">Save Location</a>
+    <img src="{{ photos }}" style="width: 200px;height:200px;"/>
 
-    <a href="{% url 'add_trip' desp.id %}" class="btn btn-success" role="button" aria-pressed="true"> Add To My Trips </a>
+{% endfor %}
+
+<p> Address: {{ biz.location.display_address }} </p>
+
+<form action = "{% url 'save_pins' %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Save to My Pins" name="save_pins"/> 
+</form>
+
+    <a href="#" class="btn btn-success" role="button" aria-pressed="true"> Add To My Trips </a>
+
 
 {% endblock %}
