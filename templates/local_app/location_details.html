@@ -12,7 +12,7 @@
 
 <p> Address: {{ biz.location.display_address }} </p>
 
-<form action = "{% url 'save_pins' %}" method="POST">
+<form action = "{% url 'save_pins' biz.id %}" method="POST">
     {% csrf_token %}
     <input type="submit" value="Save to My Pins" name="save_pins"/> 
 </form>

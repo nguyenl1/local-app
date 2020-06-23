@@ -32,7 +32,7 @@ def my_pins(request):
     }
     return render(request, 'local_app/mypins.html', context)
 
-def save_pins(request):
+def save_pins(request,id):
     api_key = get_my_key()
     endpoint = f"https://api.yelp.com/v3/businesses/{id}"
     headers = {'Authorization':'bearer %s' % api_key}
@@ -48,9 +48,9 @@ def save_pins(request):
         address = save.address = business_data['location']
         user = save.user = request.user
 
-        SavedPins.objects.create(bus_id=bus_id, name=name, address=address)
+        SavedPins.objects.create(bus_id=bus_id, name=name, address=address, user=user)
         
-        return redirect('my_pins')
+        return redirect("my_pins")
     return render(request,"local_app/location_details.html")
 
 
