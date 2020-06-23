@@ -39,109 +39,879 @@ def alamosquare (request):
  
 
 def bernalheights (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def castro (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def chinatown (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def civiccenter (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def colevalley (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def diamondheights (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def excelsior (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def filmore (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def financialdistrict (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def forestHills (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def forestknolls (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def glenpark (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def goldengate (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def haightashbury (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def hayesvalley (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def bayview (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def ingleside (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def japantown (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def lowerhaight (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def marina (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def miraloma (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def mission (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def neighborwoods (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def nobhill (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def noevalley (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def northbeach (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def oceanview (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def outermission (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def pacificheights (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def parkmerced (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def thepresidio (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def portrerohill (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def richmonddistrict (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def russianhill (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def soma (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def sunsetdistrict (request):
     #define the parameters
@@ -168,16 +938,126 @@ def sunsetdistrict (request):
     return render(request,'neighborhoods/sunset.html', context=context)
 
 def tenderloin (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def twinpeaks (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def unionsquare (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def westportal (request):
-    pass 
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+ 
 
 def westernaddition (request):
-    pass
+            #define the parameters
+    PARAMETERS = {
+        'term':'food',
+        'limit':50,
+        'radius':500,
+        'latitude': 37.777514,
+        'longitude': -122.432802,
+
+        }
+
+    #make a request to the yelp API
+
+    response = requests.get(url= ENDPOINT, params = PARAMETERS, headers=HEADERS)
+
+    #convert json string to a dictionary
+    business_data = response.json()
+
+    context = {
+        'business_data':business_data['businesses']
+    }
+
+    return render(request,'neighborhoods/alamosquare.html', context=context)
+

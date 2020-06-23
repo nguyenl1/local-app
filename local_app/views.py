@@ -28,6 +28,7 @@ def location_details(request,id):
 
     for bus in businesses:
         id = bus["id"]
+        print(id)
         url = f"https://api.yelp.com/v3/businesses/{id}"
         req = requests.get(url, headers=headers)
         parsed = json.loads(req.text)

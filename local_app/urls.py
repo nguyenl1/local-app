@@ -4,27 +4,27 @@ import requests
 import json
 from .config import get_my_key
 
-#define the api, endpoint, and header
-API_KEY = get_my_key()
-ENDPOINT = 'https://api.yelp.com/v3/businesses/search'
-HEADERS = {'Authorization':'bearer %s' % API_KEY}
+# #define the api, endpoint, and header
+# API_KEY = get_my_key()
+# ENDPOINT = 'https://api.yelp.com/v3/businesses/search'
+# HEADERS = {'Authorization':'bearer %s' % API_KEY}
 
-PARAMETERS = {
-    'term':'food',
-    'location': 'San Francisco',
-}
+# PARAMETERS = {
+#     'term':'food',
+#     'location': 'San Francisco',
+# }
 
-#make a request to the yelp APi
+# #make a request to the yelp APi
 
-response = requests.get(url = ENDPOINT, params= PARAMETERS, headers= HEADERS)
+# response = requests.get(url = ENDPOINT, params= PARAMETERS, headers= HEADERS)
 
-#convert json string to a dictionary 
+# #convert json string to a dictionary 
 
-business_data = response.json()
+# business_data = response.json()
 
-a = business_data['businesses']
+# a = business_data['businesses']
 
-slug = a[3] 
+# slug = a[3] 
 
 
 
