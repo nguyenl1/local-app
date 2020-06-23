@@ -12,32 +12,17 @@ def home(request):
 
 def location_details(request,id):
     api_key = get_my_key()
-    endpoint = 'https://api.yelp.com/v3/businesses/search'
+    endpoint = f"https://api.yelp.com/v3/businesses/{id}"
     headers = {'Authorization':'bearer %s' % api_key}
 
-    parameters = {
-        'term':'food',
-        'location': 'San Francisco',
-    }
-
-    response = requests.get(url = endpoint, params= parameters, headers= headers)
+    response = requests.get(url = endpoint, headers= headers)
 
     business_data = json.loads(response.text)
 
-    businesses = business_data["businesses"]
+    context = {
+        'biz':business_data
+    }
 
-    for bus in businesses:
-        id = bus["id"]
-        print(id)
-        url = f"https://api.yelp.com/v3/businesses/{id}"
-        req = requests.get(url, headers=headers)
-        parsed = json.loads(req.text)
-
-        context = {
-            'parsed':parsed
-        }
-
-        return render(request,'local_app/location_details.html', context=context)
+    return render(request,'local_app/location_details.html', context=context)
         
-    return render(request, "local_app/index.html")
     
