@@ -43,9 +43,9 @@ def bernalheights (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':1500,
+        'latitude': 37.738995, 
+        'longitude': -122.415454,
 
         }
 
@@ -60,7 +60,7 @@ def bernalheights (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/bernalheights.html', context=context)
  
 
 def castro (request):
@@ -68,9 +68,9 @@ def castro (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':1000,
+        'latitude': 37.762592, 
+        'longitude': -122.434194,
 
         }
 
@@ -85,7 +85,7 @@ def castro (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/castro.html', context=context)
  
 
 def chinatown (request):
@@ -93,9 +93,9 @@ def chinatown (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':400,
+        'latitude': 37.794222, 
+        'longitude': -122.407303,
 
         }
 
@@ -110,7 +110,7 @@ def chinatown (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/chinatown.html', context=context)
  
 
 def civiccenter (request):
@@ -193,9 +193,9 @@ def excelsior (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':1500,
+        'latitude': 37.726265, 
+        'longitude': -122.419818
 
         }
 
@@ -210,7 +210,7 @@ def excelsior (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/excelsior.html', context=context)
  
 
 def filmore (request):
@@ -263,7 +263,7 @@ def financialdistrict (request):
     return render(request,'neighborhoods/alamosquare.html', context=context)
  
 
-def forestHills (request):
+def foresthills (request):
             #define the parameters
     PARAMETERS = {
         'term':'food',
