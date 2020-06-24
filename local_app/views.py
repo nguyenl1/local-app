@@ -27,6 +27,7 @@ def location_details(request,id):
 
 def my_pins(request):
     pins = SavedPins.objects.filter(user=request.user)
+
     context = {
         'pins':pins,
     }
@@ -47,9 +48,10 @@ def save_pins(request,id):
         bus_id = save.bus_id = business_data['id']
         name = save.name = business_data['name']
         address = save.address = business_data['location']
+        image = save.image = business_data ['image_url']
         user = save.user = request.user
 
-        SavedPins.objects.create(bus_id=bus_id, name=name, address=address, user=user)
+        SavedPins.objects.create(bus_id=bus_id, name=name, address=address, image=image, user=user)
         
         return redirect("local_app:my_pins")
     return render(request,"local_app/location_details.html")
