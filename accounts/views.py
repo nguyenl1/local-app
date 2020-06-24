@@ -27,9 +27,9 @@ def login_user(request):
         )
         if user is not None:
             login(request,user)
-            return redirect('home')
+            return redirect('local_app:home')
     return render (request, 'accounts/login.html')
 
 def logout_user(request):
     logout(request)
-    return redirect('home')
+    return redirect('local_app:home')
