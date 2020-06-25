@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+
+
+
+
 {% block content %}
 
 <center><h2>Sunset District</h2></center>
@@ -7,18 +11,176 @@
 <div class="container">
 
 <div class="restaurants">
-    <center><h3>Places to Eat</h3></center>
-    {% for data in business_data %}
-        <ul>
-            <li><h4> {{ data.name }}</h4> <br>
-                <a href="http://127.0.0.1:8000/{{ data.id }}">
-                <img src="{{ data.image_url }}" style="width: 200px;height:200px;"/>
-                </a>
-            </li>
-        </ul>
-    {% endfor %}
-</div>
 
+    <center><h3>Places to Eat</h3></center>
+        
+    <hr>
+        
+        <ul>
+               
+                <li><a href="http://127.0.0.1:8000/{{ business_data.0.id }}">
+                    <img src="{{ business_data.0.image_url }}" style="width: 200px;height:200px;"/>
+                </a>
+                <a href="http://127.0.0.1:8000/{{ business_data.1.id }}">
+                    <img src="{{ business_data.1.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.2.id }}">
+                    <img src="{{ business_data.2.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li> <br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.4.id }}">
+                    <img src="{{ business_data.4.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.5.id }}">
+                    <img src="{{ business_data.5.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.6.id }}">
+                    <img src="{{ business_data.6.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+               
+                <li><a href="http://127.0.0.1:8000/{{ business_data.7.id }}">
+                    <img src="{{ business_data.7.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.8.id }}">
+                    <img src="{{ business_data.8.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.9.id }}">
+                    <img src="{{ business_data.9.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.10.id }}">
+                    <img src="{{ business_data.10.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.11.id }}">
+                    <img src="{{ business_data.11.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.12.id }}">
+                    <img src="{{ business_data.12.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.13.id }}">
+                    <img src="{{ business_data.13.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.14.id }}">
+                    <img src="{{ business_data.14.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.15.id }}">
+                    <img src="{{ business_data.15.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.16.id }}">
+                    <img src="{{ business_data.16.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.17.id }}">
+                    <img src="{{ business_data.17.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.18.id }}">
+                    <img src="{{ business_data.18.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.19.id }}">
+                    <img src="{{ business_data.19.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.20.id }}">
+                    <img src="{{ business_data.20.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.21.id }}">
+                    <img src="{{ business_data.21.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.22.id }}">
+                    <img src="{{ business_data.23.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.24.id }}">
+                    <img src="{{ business_data.24.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.25.id }}">
+                    <img src="{{ business_data.25.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.26.id }}">
+                    <img src="{{ business_data.26.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.27.id }}">
+                    <img src="{{ business_data.27.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.28.id }}">
+                    <img src="{{ business_data.28.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.29.id }}">
+                    <img src="{{ business_data.29.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.30.id }}">
+                    <img src="{{ business_data.30.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.31.id }}">
+                    <img src="{{ business_data.31.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.32.id }}">
+                    <img src="{{ business_data.32.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.33.id }}">
+                    <img src="{{ business_data.33.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.34.id }}">
+                    <img src="{{ business_data.34.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.35.id }}">
+                    <img src="{{ business_data.35.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.36.id }}">
+                    <img src="{{ business_data.36.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.37.id }}">
+                    <img src="{{ business_data.37.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.38.id }}">
+                    <img src="{{ business_data.38.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.39.id }}">
+                    <img src="{{ business_data.39.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.40.id }}">
+                    <img src="{{ business_data.40.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.41.id }}">
+                    <img src="{{ business_data.41.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.42.id }}">
+                    <img src="{{ business_data.42.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.43.id }}">
+                    <img src="{{ business_data.43.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.44.id }}">
+                    <img src="{{ business_data.44.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.45.id }}">
+                    <img src="{{ business_data.45.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.46.id }}">
+                    <img src="{{ business_data.46.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+                <li><a href="http://127.0.0.1:8000/{{ business_data.47.id }}">
+                    <img src="{{ business_data.47.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.48.id }}">
+                    <img src="{{ business_data.48.image_url }}" style="width: 200px;height:200px;"/>
+                </a> 
+                <a href="http://127.0.0.1:8000/{{ business_data.49.id }}">
+                    <img src="{{ business_data.49.image_url }}" style="width: 200px;height:200px;"/>
+                </a> </li><br>
+
+        </ul>
+
+</div>
 
 <div class="places">
     <center><h3>Places to Visit</h3></center>
