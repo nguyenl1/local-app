@@ -917,7 +917,7 @@ def sunsetdistrict (request):
     #define the parameters
     PARAMETERS = {
         'term':'food',
-        'limit':50,
+        'limit':48,
         'radius':2000,
         'latitude':37.752030, 
         'longitude': -122.485998,
@@ -932,7 +932,8 @@ def sunsetdistrict (request):
     business_data = response.json()
 
     context = {
-        'business_data':business_data['businesses']
+        'business_data':business_data['businesses'],
+        
     }
 
     return render(request,'neighborhoods/sunset.html', context=context)
