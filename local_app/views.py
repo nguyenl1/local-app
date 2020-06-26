@@ -46,15 +46,26 @@ def save_pins(request,id):
 
     business_data = json.loads(response.text)
 
+    location = business_data["location"]
+    coordinates = business_data["coordinates"]
+
+
     if request.method == 'POST':
         save = SavedPin(request.POST)
+
+        user = save.user = request.user
         bus_id = save.bus_id = business_data['id']
         name = save.name = business_data['name']
-        address = save.address = business_data['location']
+        address = save.address = location['address1']
+        city = save.city = location['city']
+        zip_code = save.zip_code = location ['zip_code']
+        state = save.zip_code = location['state']
         image = save.image = business_data ['image_url']
-        user = save.user = request.user
+        latitude = save.latitude = coordinates['latitude']
+        longitude = save.longitude = coordinates['longitude']
+        
 
-        SavedPin.objects.create(bus_id=bus_id, name=name, address=address, image=image, user=user)
+        SavedPin.objects.create(bus_id=bus_id, name=name, address=address, image=image, user=user, city=city, zip_code=zip_code, state=state, latitude=latitude, longitude=longitude)
         
         return redirect("local_app:my_pins")
     return render(request,"local_app/location_details.html")
