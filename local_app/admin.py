@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import SavedPins
+from .models import SavedPin, MyTrip
 
-admin.site.register(SavedPins)
+admin.site.register(SavedPin)
+admin.site.register(MyTrip)

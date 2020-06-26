@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import SavedPins
+from .models import SavedPin, MyTrip
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -26,10 +26,13 @@ def location_details(request,id):
     return render(request,'local_app/location_details.html', context)
 
 def my_pins(request):
-    pins = SavedPins.objects.filter(user=request.user)
+    pins = SavedPin.objects.filter(user=request.user)
+
+    trips = MyTrip.objects.filter(user=request.user)
 
     context = {
         'pins':pins,
+        'trips':trips,
     }
     return render(request, 'local_app/mypins.html', context)
 
@@ -44,14 +47,14 @@ def save_pins(request,id):
     business_data = json.loads(response.text)
 
     if request.method == 'POST':
-        save = SavedPins(request.POST)
+        save = SavedPin(request.POST)
         bus_id = save.bus_id = business_data['id']
         name = save.name = business_data['name']
         address = save.address = business_data['location']
         image = save.image = business_data ['image_url']
         user = save.user = request.user
 
-        SavedPins.objects.create(bus_id=bus_id, name=name, address=address, image=image, user=user)
+        SavedPin.objects.create(bus_id=bus_id, name=name, address=address, image=image, user=user)
         
         return redirect("local_app:my_pins")
     return render(request,"local_app/location_details.html")
