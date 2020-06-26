@@ -61,4 +61,24 @@ def save_pins(request,id):
 
 
 def add_trip(request,id):
-    pass 
+    if request.method == "POST":
+        save = MyTrip(request.POST)
+        user = save.user = request.user
+        saved_pin = SavedPin.objects.get(id=id)
+        saved_pin.pk = None
+        saved_pin.save()
+
+        MyTrip.objects.create(user=user, saved_pin=saved_pin)
+        
+        return redirect('local_app:my_trips')
+
+    return render(request, 'local_app/mytrips.html')
+
+def my_trips(request):
+    
+    trips = MyTrip.objects.filter(user=request.user)
+
+    context = {
+        'trips':trips,
+    }
+    return render(request, 'local_app/mytrips.html', context) 
