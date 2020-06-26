@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 import requests
 import json
 from .config import get_my_key
+from django.core.paginator import Paginator
 
 #define the api, endpoint, and header
 API_KEY = get_my_key()
@@ -31,9 +32,11 @@ def alamosquare (request):
     #convert json string to a dictionary
     business_data = response.json()
 
+
     context = {
         'business_data':business_data['businesses']
     }
+
 
     return render(request,'neighborhoods/alamosquare.html', context=context)
  
@@ -917,7 +920,7 @@ def sunsetdistrict (request):
     #define the parameters
     PARAMETERS = {
         'term':'food',
-        'limit':48,
+        'limit':50,
         'radius':2000,
         'latitude':37.752030, 
         'longitude': -122.485998,

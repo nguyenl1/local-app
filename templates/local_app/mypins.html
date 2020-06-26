@@ -18,5 +18,18 @@
         </ul>
     {% endfor %}
 
+    <h2> My Trips </h2>
+
+    {% for trip in trips %}
+        <ul>
+            <li>
+                {{ trip.saved_pin.name }} <br>
+                
+                <img src="{{ trip.saved_pin.image }}" style="width: 200px;height:200px;"/>
+                
+            </li>
+        </ul>
+    {% endfor %}
+
 
 {% endblock %}

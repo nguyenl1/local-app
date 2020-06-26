@@ -2,23 +2,30 @@
 
 {% block content %}
 
-<center><h2>Alamo Sqaure</h2></center>
+<center><h2>Alamo Square</h2></center>
 
 <div class="container">
 
 <div class="restaurants">
     <center><h3>Places to Eat</h3></center>
-    {% for data in business_data %}
-        <ul>
-            <li><h4> {{ data.name }}</h4> <br>
-                <p>{{ data.index }}</p>
-                <a href="http://127.0.0.1:8000/{{ data.id }}">
-                <img src="{{ data.image_url }}" style="width: 200px;height:200px;"/>
-                </a>
-            </li>
-        </ul>
-    {% endfor %}
+    
+    <div class="columnwrapper">
+        <div class="row">
+                
+            {% for data in business_data|slice:":3" %}
+                <div class="col"><h4> {{ data.name }}</h4> <br>
+                    <p>{{ data.index }}</p>
+                    <a href="http://127.0.0.1:8000/{{ data.id }}">
+                    <img src="{{ data.image_url }}" style="width: 200px;height:200px;"/>
+                    </a>
+                </div>
+            {% endfor %}
+                
+        </div>
+    </div>
+    
 </div>
+
 
 
 <div class="places">
@@ -27,4 +34,19 @@
 </div>
 
 </div>
+
+<div class="row">
+    {% for data in business_data %}
+        <div class="col-4">
+            <h4> {{ data.name }}</h4> <br>
+            <p>{{ data.index }}</p>
+            <a href="http://127.0.0.1:8000/{{ data.id }}">
+                <img src="{{ data.image_url }}" style="width: 200px;height:200px;"/>
+            </a>
+        </div>
+    {% endfor %}
+    
+</div>
+
+
 {% endblock %}
