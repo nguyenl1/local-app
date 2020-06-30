@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 
+
+
 {% block content %}
 
-
+<div class="mytripcontainer">
+    <div id="mytriplist">
     <h2> My Trips </h2>
 
     {% for trip in trips %}
@@ -13,10 +16,21 @@
                 <img src="{{ trip.saved_pin.image }}" style="width: 200px;height:200px;"/>
 
                 {{ trip.saved_pin.address }}
+                <br>
+                <a href="{% url 'local_app:remove_trip' trip.id %}" class="btn btn-danger" role="button" aria-pressed="true">Remove Pin</a>
                 
             </li>
         </ul>
-    {% endfor %}
 
+    {% endfor %}
+    
+    </div>
+
+       
+    <div id="map"></div>
+
+
+
+</div>
 
 {% endblock %}

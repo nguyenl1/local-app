@@ -6,6 +6,9 @@ from django.contrib.auth.decorators import login_required
 import requests
 import json
 from .config import get_my_key
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 def home(request):
     return render(request, "local_app/index.html")
@@ -37,7 +40,6 @@ def my_pins(request):
     return render(request, 'local_app/mypins.html', context)
 
 def save_pins(request,id):
-    print (id)
     api_key = get_my_key()
     endpoint = f"https://api.yelp.com/v3/businesses/{id}"
     headers = {'Authorization':'bearer %s' % api_key}
@@ -48,6 +50,8 @@ def save_pins(request,id):
 
     location = business_data["location"]
     coordinates = business_data["coordinates"]
+    photos = business_data["photos"]
+    print(photos[0])
 
 
     if request.method == 'POST':
@@ -81,7 +85,7 @@ def add_trip(request,id):
 
         MyTrip.objects.create(user=user, saved_pin=saved_pin)
         
-        return redirect('local_app:my_trips')
+        return redirect("local_app:my_trips")
 
     return render(request, 'local_app/mytrips.html')
 
@@ -93,3 +97,25 @@ def my_trips(request):
         'trips':trips,
     }
     return render(request, 'local_app/mytrips.html', context) 
+
+def remove_pins(request,id):
+    remove = get_object_or_404(SavedPin, pk=id)
+    remove.delete()
+    return redirect("local_app:my_pins")
+
+def remove_trip(request,id):
+    remove = get_object_or_404(MyTrip, pk=id)
+    remove.delete()
+    return redirect("local_app:my_trips")
+
+def my_dashboard(request):
+
+    pins = SavedPin.objects.filter(user=request.user)
+
+    trips = MyTrip.objects.filter(user=request.user)
+
+    context = {
+        'pins':pins,
+        'trips':trips,
+    }
+    return render(request, 'local_app/dashboard.html', context)
