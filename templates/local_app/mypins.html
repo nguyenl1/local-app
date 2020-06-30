@@ -13,14 +13,37 @@
                 {{ pin.name }} <br>
                 
                 <img src="{{ pin.image }}" style="width: 200px;height:200px;"/>
-                <form action= "{% url 'local_app:add_trip' pin.id %}" method="POST">
-                    {% csrf_token %}
-                    <input type="submit" value="Add To Trip" name="add_trip"/> 
-                </form>
+
+                <br>
+
+                
+                    <input type="submit" value="Add To Trip" name="add_trip" id="myBtn"/> 
+                
+                
+                <br>
+
+                <a href="{% url 'local_app:remove_pins' pin.id %}" class="btn btn-danger" role="button" aria-pressed="true">Remove Pin</a>
+
                 
             </li>
         </ul>
     {% endfor %}
+    
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Add to..</p>
+        <select multiple id="waypoints">
+            <option value="montreal, quebec">Montreal, QBC</option>
+            <option value="toronto, ont">Toronto, ONT</option>
+            <option value="chicago, il">Chicago</option>
+            <option value="winnipeg, mb">Winnipeg</option>
+            <option value="fargo, nd">Fargo</option>
+            <option value="calgary, ab">Calgary</option>
+            <option value="spokane, wa">Spokane</option>
+          </select>
+    </div>
+</div>
 
 
 {% endblock %}

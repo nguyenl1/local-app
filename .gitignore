@@ -264,3 +264,5 @@ db.sqlite3
 #keys
 
 config.py
+
+base.html 

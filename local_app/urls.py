@@ -12,5 +12,8 @@ urlpatterns = [
     path('savepins/<slug:id>', views.save_pins, name="save_pins"),
     path('addtrip/<int:id>', views.add_trip, name="add_trip"),
     path('mypins',views.my_pins, name="my_pins" ),
-    path('mytrips', views.my_trips, name="my_trips")
+    path('mytrips', views.my_trips, name="my_trips"),
+    path('removepins/<int:id>', views.remove_pins, name="remove_pins"),
+    path('removetrip/<int:id>', views.remove_trip, name="remove_trip"),
+    path('mydashboard', views.my_dashboard, name="my_dashboard"),
 ]
