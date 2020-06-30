@@ -21,7 +21,8 @@ class SavedPin(models.Model):
 class MyTrip(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, null=True)
     saved_pin = models.ForeignKey(SavedPin, on_delete=models.PROTECT, null=True)
-
+    name = models.CharField(max_length = 200, blank = True)
+    
 class SubmitPost(models.Model):
     site_name = models.CharField(max_length = 200)
     address = models.CharField(max_length=200)

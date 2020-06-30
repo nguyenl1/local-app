@@ -10,14 +10,14 @@
 
     {% for trip in trips %}
         <ul>
-            <li>
+            <li draggable="true" ondragstart="dragStarted(event)" ondragover="draggingOver(event)" ondrop="dropped(event)" >
                 {{ trip.saved_pin.name }} <br>
                 
-                <img src="{{ trip.saved_pin.image }}" style="width: 200px;height:200px;"/>
+                <img src="{{ trip.saved_pin.image }}" style="width: 50px;height:50px;"/>
 
                 {{ trip.saved_pin.address }}
                 <br>
-                <a href="{% url 'local_app:remove_trip' trip.id %}" class="btn btn-danger" role="button" aria-pressed="true">Remove Pin</a>
+                <a href="{% url 'local_app:remove_trip' trip.id %}">Remove Pin</a>
                 
             </li>
         </ul>

@@ -33,17 +33,16 @@
     <div class="modal-content">
         <span class="close">&times;</span>
         <p>Add to..</p>
-        <select multiple id="waypoints">
-            <option value="montreal, quebec">Montreal, QBC</option>
-            <option value="toronto, ont">Toronto, ONT</option>
-            <option value="chicago, il">Chicago</option>
-            <option value="winnipeg, mb">Winnipeg</option>
-            <option value="fargo, nd">Fargo</option>
-            <option value="calgary, ab">Calgary</option>
-            <option value="spokane, wa">Spokane</option>
+        <select name="trip_names" onchange='checkTrips(this.value);'>
+            <option> Add Pin To </option>
+            <option value="new_trip"> Create New Trip </option>
           </select>
+        
+        <input type="text" name="new_trip" id="new_trip" style='display:none;'/>
     </div>
 </div>
+
+
 
 
 {% endblock %}
