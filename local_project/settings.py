@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     'local_app',
     'accounts',
     'neighborhoods',
-    'g_maps',
     'cloudinary',
 ]
 
