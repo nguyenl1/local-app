@@ -4,32 +4,40 @@
 
 {% block content %}
 
-<div class="mytripcontainer">
-    <div id="mytriplist">
-    <h2> My Trips </h2>
+<div class ="row">
 
-    {% for trip in trips %}
-        <ul>
-            <li draggable="true" ondragstart="dragStarted(event)" ondragover="draggingOver(event)" ondrop="dropped(event)" >
-                {{ trip.saved_pin.name }} <br>
-                
-                <img src="{{ trip.saved_pin.image }}" style="width: 50px;height:50px;"/>
-
-                {{ trip.saved_pin.address }}
-                <br>
-                <a href="{% url 'local_app:remove_trip' trip.id %}">Remove Pin</a>
-                
-            </li>
-        </ul>
-
-    {% endfor %}
+<div id="right-panel" class="col">
+    <strong>Start:</strong>
     
-    </div>
+    <select id="start">
+        {% for trip in trips %}
+      <option value="{{ trip.saved_pin.address }}">{{ trip.saved_pin.name }}</option>
+      {% endfor %}
+    </select>
+    
+    <strong>Along Your Route:</strong>
+    <select multiple id="waypoints">
+        {% for trip in trips %}
+        <option value="{{ trip.saved_pin.address }}">{{ trip.saved_pin.name }}</option>
+        {% endfor %}
+    </select>
 
-       
-    <div id="map"></div>
+    <br />
 
+    <strong>End:</strong>
+    <select id="end">
+        {% for trip in trips %}
+      <option value="{{ trip.saved_pin.address }}">{{ trip.saved_pin.name }}</option>
+      {% endfor %}
+    </select>
+    <br />
+    
+<input type="submit" id="submit" />
+</div>
 
+<div id="map" class="col-5"></div>
+
+<div id="directions-panel" class="col"></div>
 
 </div>
 

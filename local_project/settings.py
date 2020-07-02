@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'accounts',
     'neighborhoods',
     'cloudinary',
+    'multiselectfield',
 ]
 
 MIDDLEWARE = [

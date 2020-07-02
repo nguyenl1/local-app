@@ -16,9 +16,10 @@
 
                 <br>
 
-                
+                <form action = "{% url 'local_app:add_trip' pin.id %}" method="POST">
+                    {% csrf_token %}
                     <input type="submit" value="Add To Trip" name="add_trip" id="myBtn"/> 
-                
+                </form>
                 
                 <br>
 
@@ -29,7 +30,7 @@
         </ul>
     {% endfor %}
     
-<div id="myModal" class="modal">
+<!-- <div id="myModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <p>Add to..</p>
@@ -40,7 +41,7 @@
         
         <input type="text" name="new_trip" id="new_trip" style='display:none;'/>
     </div>
-</div>
+</div> -->
 
 
 

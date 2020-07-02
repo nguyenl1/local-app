@@ -5,6 +5,7 @@ from django.contrib.auth import get_user_model
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+from multiselectfield import MultiSelectField
 
 class SavedPin(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, null=True)
