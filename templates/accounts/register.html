@@ -2,15 +2,39 @@
 
 {% block content %}
 
-    <form action= "{% url 'register' %}" method="POST">
+<div class="accounts-container">
+
+    <form action= "{% url 'register' %}" method="POST" id="signup">
         {% csrf_token %}
-        username: <input type="text" name="username"/> <br>
-        email: <input type = "email" name="email"/> <br>
-        first name: <input type="text" name="first_name"/> <br>
-        last name: <input type="text" name="last_name"/> <br>
-        password: <input type="password" name="password"/> <br>
-        <input type = "submit" value="Sign Up"/>
+
+        <div class="header">
+        
+            <h3>Sign Up</h3>
+            
+        </div>
+        
+        <div class="sep">
+            <hr>
+        </div>
+
+        <div class="inputs">
+            <center>
+            
+            <input type="text" placeholder="First Name" name="first_name" autofocus />
+            <input type="text" placeholder="Last Name" name="last_name" autofocus />
+            <input type="text" placeholder="Username" name="username" autofocus />
+            <input type="email" placeholder="e-mail" name="email" autofocus />
+            <input type="password" placeholder="Password" name="password" />
+            <br>
+            <input type = "submit" value="Sign Up!" id="submit"/>
+        </center>
+        </div>
+
     </form>
 
+</div>
+
 {% endblock %}
+
+​
 
