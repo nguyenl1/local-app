@@ -81,9 +81,7 @@ def add_trip(request,id):
     if request.method == "POST":
         save = MyTrip(request.POST)
         user = save.user = request.user
-        saved_pin = SavedPin.objects.get(id=id)
-        saved_pin.pk = None
-        saved_pin.save()
+        saved_pin = SavedPin.objects.get(pk=id)
 
         MyTrip.objects.create(user=user, saved_pin=saved_pin)
         
@@ -110,14 +108,6 @@ def remove_trip(request,id):
     remove.delete()
     return redirect("local_app:my_trips")
 
-def my_dashboard(request):
-
-    pins = SavedPin.objects.filter(user=request.user)
-
-    trips = MyTrip.objects.filter(user=request.user)
-
-    context = {
-        'pins':pins,
-        'trips':trips,
-    }
-    return render(request, 'local_app/dashboard.html', context)
+def delete_all(request):
+    MyTrip.objects.all().delete()
+    return redirect("local_app:my_pins")

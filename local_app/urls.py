@@ -15,5 +15,5 @@ urlpatterns = [
     path('mytrips', views.my_trips, name="my_trips"),
     path('removepins/<int:id>', views.remove_pins, name="remove_pins"),
     path('removetrip/<int:id>', views.remove_trip, name="remove_trip"),
-    path('mydashboard', views.my_dashboard, name="my_dashboard"),
+    path('deleteall', views.delete_all, name="delete_all"),
 ]
