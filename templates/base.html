@@ -1,6 +1,7 @@
 {% load static %}
 
 
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,6 +23,8 @@
     
     <link rel="stylesheet" href="{% static './css/style.css'%}">
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
     
 
     <title>LOCAL.</title>
@@ -29,7 +32,9 @@
 <body>
 
 <div class = "wrapper">
+  <a  href="{% url 'local_app:home' %}">
   <center><img src="https://i.ibb.co/GTSQbLp/local-header-copy.png" id="imgheader"></center>
+  </a>
 
 
   
