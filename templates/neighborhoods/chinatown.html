@@ -1,29 +1,54 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<br>
 
 <center><h2>Chinatown</h2></center>
+
+<hr>
 
 <div class="container">
 
 <div class="restaurants">
     <center><h3>Places to Eat</h3></center>
-    {% for data in business_data %}
-        <ul>
-            <li><h4> {{ data.name }}</h4> <br>
+    <br>
+    
+    <div class="row">
+        {% for data in business_data %}
+            <div class="col-sm-4">
                 <a href="http://127.0.0.1:8000/{{ data.id }}">
-                <img src="{{ data.image_url }}" style="width: 200px;height:200px;"/>
-                </a>
-            </li>
-        </ul>
-    {% endfor %}
+                    <img src="{{ data.image_url }}" style="width: 150px;height:150px;"/>
+                </a> <br>
+            </div>
+        {% endfor %}
+        
+    </div>
+    
 </div>
 
 
-<div class="places">
-    <center><h3>Places to Visit</h3></center>
+
+    <div class="places">
+
+        <center><h3>Places to Visit</h3></center>
+        <br>
+
+        <div class="row">
+            {% for data in business_data %}
+                <div class="col-sm-4">
+                    <a href="http://127.0.0.1:8000/{{ data.id }}">
+                        <img src="{{ data.image_url }}" style="width: 150px;height:150px;"/>
+                    </a> <br>
+                </div>
+            {% endfor %}
+            
+        </div>
+
+    </div>
 
 </div>
 
-</div>
+
+
+
 {% endblock %}
