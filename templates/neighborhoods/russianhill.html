@@ -8,23 +8,29 @@
 <hr>
 
 <div class="container">
-
-<div class="restaurants">
-    <center><h3>Places to Eat</h3></center>
-    <br>
-    
-    <div class="row">
-        {% for data in business_data %}
-            <div class="col-sm-4">
-                <a href="http://127.0.0.1:8000/{{ data.id }}">
+    <div class="restaurants">
+        <center><h3>Places to Eat</h3></center>
+        <br>
+        
+        <div class="row">
+            {% for data in business_data %}
+                <div class="col-sm-4">
                     <img src="{{ data.image_url }}" style="width: 150px;height:150px;"/>
-                </a> <br>
-            </div>
-        {% endfor %}
+                    <p class="title">{{ data.name}}</p>
+                    <div class="overlay"></div>
+                    <div class="button">
+                        <form action = "{% url 'local_app:save_pins' data.id %}" method="POST">
+                            {% csrf_token %}
+                            <input type="submit" value="Save to My Pins" name="save_pins"/> 
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+            
+        </div>
         
     </div>
     
-</div>
 
 
 
