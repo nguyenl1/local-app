@@ -28,61 +28,78 @@
 </head>
 <body>
 
+<div class = "wrapper">
+  <center><img src="https://i.ibb.co/GTSQbLp/local-header-copy.png" id="imgheader"></center>
+
+
+  
   {% if user.is_authenticated %}
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="{% url 'local_app:home' %}">LOCAL.</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-light" style="background-color: white;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'local_app:home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'local_app:my_dashboard' %}">My Dashboard</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'local_app:my_pins' %}">My Pins</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'local_app:my_trips' %}">My Trips</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{% url 'local_app:home' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+        
+              <a class="nav-item nav-link active" href="{% url 'local_app:home' %}">Home <span class="sr-only">(current)</span></a>
+            
+      
+              <a class="nav-item nav-link" href="{% url 'local_app:my_dashboard' %}">My Dashboard</a>
+              
+            
+              <a class="nav-item nav-link" href="{% url 'local_app:my_pins' %}">My Pins</a>
+            
+           
+              <a class="nav-item nav-link" href="{% url 'local_app:my_trips' %}">My Trips</a>
+            
+            
+              <a class="nav-item nav-link dropdown-toggle" href="{% url 'local_app:home' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Neighorhoods
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="{% url 'alamosquare' %}">Alamo Square</a>                
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Bayview-Hunter's Point</a>
+                <a class="dropdown-item" href="{% url 'bayview' %}">Bayview-Hunter's Point</a>
                 <a class="dropdown-item" href="{% url 'bernalheights' %}">Bernal Heights</a>
                 <a class="dropdown-item" href="{% url 'castro' %}">The Castro</a>
                 <a class="dropdown-item" href="{% url 'chinatown' %}">Chinatown</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Downtown</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Embarcadero</a>
+                <a class="dropdown-item" href="{% url 'civiccenter' %}">Civic Center</a>
+                <a class="dropdown-item" href="{% url 'colevalley' %}">Cole Valley</a>
+                <a class="dropdown-item" href="{% url 'diamondheights' %}">Diamond Heights</a>
                 <a class="dropdown-item" href="{% url 'excelsior' %}">Excelsior</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Financial District</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Golden Gate Park</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Haight</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Hayes Valley</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Ingleside</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Japantown</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Lake Merced</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Marina</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Mission District</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Nob Hill</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Noe Valley</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">North Beach</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Pacific Heights</a>
+                <a class="dropdown-item" href="{% url 'filmore' %}">Filmore District</a>
+                <a class="dropdown-item" href="{% url 'financialdistrict' %}">Financial District</a>
+                <a class="dropdown-item" href="{% url 'foresthills' %}">Forest Hills</a>
+                <a class="dropdown-item" href="{% url 'forestknolls' %}">Forest Knolls</a>
+                <a class="dropdown-item" href="{% url 'glenpark' %}">Glen Park</a>
+                <a class="dropdown-item" href="{% url 'goldengate' %}">Golden Gate Park</a>
+                <a class="dropdown-item" href="{% url 'haightashbury' %}">Haight and Ashbury</a>
+                <a class="dropdown-item" href="{% url 'hayesvalley' %}">Hayes Valley</a>
+                <a class="dropdown-item" href="{% url 'ingleside' %}">Ingleside</a>
+                <a class="dropdown-item" href="{% url 'japantown' %}">Japantown</a>
+                <a class="dropdown-item" href="{% url 'lowerhaight' %}">Lower Haight</a>
+                <a class="dropdown-item" href="{% url 'marina' %}">Marina</a>
+                <a class="dropdown-item" href="{% url 'miraloma' %}">Miraloma</a>
+                <a class="dropdown-item" href="{% url 'mission' %}">Mission District</a>
+                <a class="dropdown-item" href="{% url 'neighborwoods' %}">NeighborWoods</a>
+                <a class="dropdown-item" href="{% url 'nobhill' %}">Nob Hill</a>
+                <a class="dropdown-item" href="{% url 'noevalley' %}">Noe Valley</a>
+                <a class="dropdown-item" href="{% url 'northbeach' %}">North Beach</a>
+                <a class="dropdown-item" href="{% url 'oceanview' %}">Ocean View</a>
+                <a class="dropdown-item" href="{% url 'outermission' %}">Outer Mission</a>
+                <a class="dropdown-item" href="{% url 'pacificheights' %}">Pacific Heights</a>
                 <a class="dropdown-item" href="{% url 'local_app:home' %}">Portero Hill</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Presidio</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Richmond District</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Russian Hill</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">South of Market</a>
+                <a class="dropdown-item" href="{% url 'parkmerced' %}">Park Merced</a>
+                <a class="dropdown-item" href="{% url 'thepresidio' %}">The Presidio</a>
+                <a class="dropdown-item" href="{% url 'portrerohill' %}">Portrero Hill</a>
+                <a class="dropdown-item" href="{% url 'richmonddistrict' %}">Richmond District</a>
+                <a class="dropdown-item" href="{% url 'russianhill' %}">Russian Hill</a>
+                <a class="dropdown-item" href="{% url 'soma' %}">South of Market</a>
                 <a class="dropdown-item" href="{% url 'sunsetdistrict' %}">Sunset District</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Tenderloin</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Twin Peaks</a>
-                <a class="dropdown-item" href="{% url 'local_app:home' %}">Western Addition</a>
+                <a class="dropdown-item" href="{% url 'tenderloin' %}">Tenderloin</a>
+                <a class="dropdown-item" href="{% url 'twinpeaks' %}">Twin Peaks</a>
+                <a class="dropdown-item" href="{% url 'unionsquare' %}">Union Square</a>
+                <a class="dropdown-item" href="{% url 'westportal' %}">West Portal</a>
+                <a class="dropdown-item" href="{% url 'westernaddition' %}">Western Addition</a>
               </div>
             </li>
             <li class="nav-item">
@@ -94,7 +111,6 @@
 
     {% else %}
   <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
-    <a class="navbar-brand" href="{% url 'local_app:home' %}"><h1>LOCAL.</h1></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -110,42 +126,57 @@
       <a class="nav-link dropdown-toggle" href="{% url 'local_app:home' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Neighorhoods
       </a>
+    
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <a class="dropdown-item" href="{% url 'alamosquare' %}">Alamo Square</a>                
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Bayview-Hunter's Point</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Bernal Heights</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">The Castro</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Chinatown</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Downtown</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Embarcadero</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Excelsior</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Financial District</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Golden Gate Park</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Haight</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Hayes Valley</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Ingleside</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Japantown</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Lake Merced</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Marina</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Mission District</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Nob Hill</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Noe Valley</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">North Beach</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Pacific Heights</a>
+        <a class="dropdown-item" href="{% url 'bayview' %}">Bayview-Hunter's Point</a>
+        <a class="dropdown-item" href="{% url 'bernalheights' %}">Bernal Heights</a>
+        <a class="dropdown-item" href="{% url 'castro' %}">The Castro</a>
+        <a class="dropdown-item" href="{% url 'chinatown' %}">Chinatown</a>
+        <a class="dropdown-item" href="{% url 'civiccenter' %}">Civic Center</a>
+        <a class="dropdown-item" href="{% url 'colevalley' %}">Cole Valley</a>
+        <a class="dropdown-item" href="{% url 'diamondheights' %}">Diamond Heights</a>
+        <a class="dropdown-item" href="{% url 'excelsior' %}">Excelsior</a>
+        <a class="dropdown-item" href="{% url 'filmore' %}">Filmore District</a>
+        <a class="dropdown-item" href="{% url 'financialdistrict' %}">Financial District</a>
+        <a class="dropdown-item" href="{% url 'foresthills' %}">Forest Hills</a>
+        <a class="dropdown-item" href="{% url 'forestknolls' %}">Forest Knolls</a>
+        <a class="dropdown-item" href="{% url 'glenpark' %}">Glen Park</a>
+        <a class="dropdown-item" href="{% url 'goldengate' %}">Golden Gate Park</a>
+        <a class="dropdown-item" href="{% url 'haightashbury' %}">Haight and Ashbury</a>
+        <a class="dropdown-item" href="{% url 'hayesvalley' %}">Hayes Valley</a>
+        <a class="dropdown-item" href="{% url 'ingleside' %}">Ingleside</a>
+        <a class="dropdown-item" href="{% url 'japantown' %}">Japantown</a>
+        <a class="dropdown-item" href="{% url 'lowerhaight' %}">Lower Haight</a>
+        <a class="dropdown-item" href="{% url 'marina' %}">Marina</a>
+        <a class="dropdown-item" href="{% url 'miraloma' %}">Miraloma</a>
+        <a class="dropdown-item" href="{% url 'mission' %}">Mission District</a>
+        <a class="dropdown-item" href="{% url 'neighborwoods' %}">NeighborWoods</a>
+        <a class="dropdown-item" href="{% url 'nobhill' %}">Nob Hill</a>
+        <a class="dropdown-item" href="{% url 'noevalley' %}">Noe Valley</a>
+        <a class="dropdown-item" href="{% url 'northbeach' %}">North Beach</a>
+        <a class="dropdown-item" href="{% url 'oceanview' %}">Ocean View</a>
+        <a class="dropdown-item" href="{% url 'outermission' %}">Outer Mission</a>
+        <a class="dropdown-item" href="{% url 'pacificheights' %}">Pacific Heights</a>
         <a class="dropdown-item" href="{% url 'local_app:home' %}">Portero Hill</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Presidio</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Richmond District</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Russian Hill</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">South of Market</a>
+        <a class="dropdown-item" href="{% url 'parkmerced' %}">Park Merced</a>
+        <a class="dropdown-item" href="{% url 'thepresidio' %}">The Presidio</a>
+        <a class="dropdown-item" href="{% url 'portrerohill' %}">Portrero Hill</a>
+        <a class="dropdown-item" href="{% url 'richmonddistrict' %}">Richmond District</a>
+        <a class="dropdown-item" href="{% url 'russianhill' %}">Russian Hill</a>
+        <a class="dropdown-item" href="{% url 'soma' %}">South of Market</a>
         <a class="dropdown-item" href="{% url 'sunsetdistrict' %}">Sunset District</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Tenderloin</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Twin Peaks</a>
-        <a class="dropdown-item" href="{% url 'local_app:home' %}">Western Addition</a>
-      </div>
+        <a class="dropdown-item" href="{% url 'tenderloin' %}">Tenderloin</a>
+        <a class="dropdown-item" href="{% url 'twinpeaks' %}">Twin Peaks</a>
+        <a class="dropdown-item" href="{% url 'unionsquare' %}">Union Square</a>
+        <a class="dropdown-item" href="{% url 'westportal' %}">West Portal</a>
+        <a class="dropdown-item" href="{% url 'westernaddition' %}">Western Addition</a>
+
     </li>
 
   </nav>
   {% endif %}
+</div>
     
 
 
@@ -164,7 +195,7 @@
     <script src="{% static './js/func.js' %}"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script async defer
-        src= "https://maps.googleapis.com/maps/api/js?key=your_api&v=3&callback=initMap">
+        src= "https://maps.googleapis.com/maps/api/js?key=yourapikey&v=3&callback=initMap">
     </script>
     
     
