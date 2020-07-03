@@ -65,13 +65,15 @@ def save_pins(request,id):
         zip_code = save.zip_code = location ['zip_code']
         state = save.zip_code = location['state']
         image = save.image = business_data ['image_url']
+        image_2 = save.image_2 = photos[1]
+        image_3 = save.image_3 = photos[2]
         latitude = save.latitude = coordinates['latitude']
         longitude = save.longitude = coordinates['longitude']
         
 
-        SavedPin.objects.create(bus_id=bus_id, name=name, address=address, image=image, user=user, city=city, zip_code=zip_code, state=state, latitude=latitude, longitude=longitude)
+        SavedPin.objects.create(bus_id=bus_id, name=name, address=address, image=image, image_2=image_2, image_3=image_3, user=user, city=city, zip_code=zip_code, state=state, latitude=latitude, longitude=longitude)
         
-        return redirect("local_app:my_pins")
+        return redirect(request.META['HTTP_REFERER'])
     return render(request,"local_app/location_details.html")
 
 
@@ -85,7 +87,7 @@ def add_trip(request,id):
 
         MyTrip.objects.create(user=user, saved_pin=saved_pin)
         
-        return redirect("local_app:my_trips")
+        return redirect(request.META['HTTP_REFERER'])
 
     return render(request, 'local_app/mytrips.html')
 

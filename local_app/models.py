@@ -16,12 +16,14 @@ class SavedPin(models.Model):
     zip_code = models.CharField(max_length = 200, blank=True)
     state = models.CharField(max_length = 200, blank=True)
     image = models.TextField(max_length=2000, blank=True)
+    image_2 = models.TextField(max_length=2000, blank=True)
+    image_3 = models.TextField(max_length=2000, blank=True)
     latitude = models.TextField(max_length=2000, blank=True)
     longitude = models.TextField(max_length=2000, blank=True)
 
 class MyTrip(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, null=True)
-    saved_pin = models.ForeignKey(SavedPin, on_delete=models.CASCADE, null=True)
+    saved_pin = models.ForeignKey(SavedPin, on_delete=models.PROTECT, null=True)
     name = models.CharField(max_length = 200, blank = True)
     
 class SubmitPost(models.Model):
