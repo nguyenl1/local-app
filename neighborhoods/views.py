@@ -122,8 +122,8 @@ def civiccenter (request):
         'term':'food',
         'limit':50,
         'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'latitude': 37.779439, 
+        'longitude': -122.418100,
 
         }
 
@@ -138,7 +138,7 @@ def civiccenter (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/civiccenter.html', context=context)
  
 
 def colevalley (request):
@@ -146,9 +146,9 @@ def colevalley (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':400,
+        'latitude': 37.765880,
+        'longitude': -122.449944,
 
         }
 
@@ -163,7 +163,7 @@ def colevalley (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/colevalley.html', context=context)
  
 
 def diamondheights (request):
@@ -171,9 +171,9 @@ def diamondheights (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':1000,
+        'latitude': 37.742692, 
+        'longitude': -122.441789,
 
         }
 
@@ -188,7 +188,7 @@ def diamondheights (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/diamondheights.html', context=context)
  
 
 def excelsior (request):
@@ -196,9 +196,9 @@ def excelsior (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':1500,
-        'latitude': 37.726265, 
-        'longitude': -122.419818
+        'radius':1000,
+        'latitude': 37.725695, 
+        'longitude': -122.421417,
 
         }
 
@@ -221,9 +221,9 @@ def filmore (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':800,
+        'latitude': 37.780981,
+        'longitude': -122.428956
 
         }
 
@@ -238,7 +238,7 @@ def filmore (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/filmore.html', context=context)
  
 
 def financialdistrict (request):
@@ -246,9 +246,9 @@ def financialdistrict (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':400,
+        'latitude': 37.794367, 
+        'longitude': -122.401436,
 
         }
 
@@ -263,7 +263,7 @@ def financialdistrict (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/financialdistrict.html', context=context)
  
 
 def foresthills (request):
@@ -271,9 +271,9 @@ def foresthills (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':400,
+        'latitude': 37.747934,
+        'longitude': -122.464413,
 
         }
 
@@ -288,7 +288,7 @@ def foresthills (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/foresthills.html', context=context)
  
 
 def forestknolls (request):
@@ -297,8 +297,8 @@ def forestknolls (request):
         'term':'food',
         'limit':50,
         'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'latitude': 37.758336, 
+        'longitude': -122.457947,
 
         }
 
@@ -313,7 +313,7 @@ def forestknolls (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/forestknolls.html', context=context)
  
 
 def glenpark (request):
@@ -322,8 +322,8 @@ def glenpark (request):
         'term':'food',
         'limit':50,
         'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'latitude': 37.737774, 
+        'longitude': -122.431653,
 
         }
 
@@ -338,7 +338,7 @@ def glenpark (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/glenpark.html', context=context)
  
 
 def goldengate (request):
@@ -347,8 +347,8 @@ def goldengate (request):
         'term':'food',
         'limit':50,
         'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'latitude': 37.769376, 
+        'longitude': -122.478405,
 
         }
 
@@ -363,7 +363,7 @@ def goldengate (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/goldengate.html', context=context)
  
 
 def haightashbury (request):
@@ -372,8 +372,8 @@ def haightashbury (request):
         'term':'food',
         'limit':50,
         'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'latitude': 37.772538,
+        'longitude':  -122.445892,
 
         }
 
@@ -388,7 +388,7 @@ def haightashbury (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/haightashbury.html', context=context)
  
 
 def hayesvalley (request):
@@ -396,9 +396,9 @@ def hayesvalley (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':300,
+        'latitude': 37.775154, 
+        'longitude': -122.425161,
 
         }
 
@@ -413,7 +413,7 @@ def hayesvalley (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/hayesvalley.html', context=context)
  
 
 def bayview (request):
@@ -421,9 +421,9 @@ def bayview (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':1000,
+        'latitude': 37.731062, 
+        'longitude': -122.385524,
 
         }
 
@@ -438,7 +438,7 @@ def bayview (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/bayview.html', context=context)
  
 
 def ingleside (request):
@@ -446,9 +446,9 @@ def ingleside (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':300,
+        'latitude': 37.721254, 
+        'longitude': -122.454165,
 
         }
 
@@ -463,7 +463,7 @@ def ingleside (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/ingleside.html', context=context)
  
 
 def japantown (request):
@@ -471,9 +471,9 @@ def japantown (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':300,
+        'latitude': 37.785741, 
+        'longitude': -122.430525,
 
         }
 
@@ -488,7 +488,7 @@ def japantown (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/japantown.html', context=context)
  
 
 def lowerhaight (request):
@@ -497,8 +497,8 @@ def lowerhaight (request):
         'term':'food',
         'limit':50,
         'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'latitude': 37.771866, 
+        'longitude': -122.434065,
 
         }
 
@@ -513,7 +513,7 @@ def lowerhaight (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/lowerhaight.html', context=context)
  
 
 def marina (request):
@@ -521,9 +521,9 @@ def marina (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':600,
+        'latitude': 37.803818, 
+        'longitude': -122.437024,
 
         }
 
@@ -538,7 +538,7 @@ def marina (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/marina.html', context=context)
  
 
 def miraloma (request):
@@ -546,9 +546,9 @@ def miraloma (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':600,
+        'latitude': 37.739274, 
+        'longitude': -122.449636,
 
         }
 
@@ -563,7 +563,7 @@ def miraloma (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/miraloma.html', context=context)
  
 
 def mission (request):
@@ -571,9 +571,9 @@ def mission (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':750,
+        'latitude': 37.758954,
+        'longitude':  -122.415774,
 
         }
 
@@ -588,7 +588,7 @@ def mission (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/mission.html', context=context)
  
 
 def neighborwoods (request):
@@ -596,9 +596,9 @@ def neighborwoods (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':300,
+        'latitude': 37.734321,
+        'longitude':  -122.463429,
 
         }
 
@@ -613,7 +613,7 @@ def neighborwoods (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/neighborwoods.html', context=context)
  
 
 def nobhill (request):
@@ -621,9 +621,9 @@ def nobhill (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':250,
+        'latitude': 37.793062, 
+        'longitude': -122.416112,
 
         }
 
@@ -638,7 +638,7 @@ def nobhill (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/nobhill.html', context=context)
  
 
 def noevalley (request):
@@ -647,8 +647,8 @@ def noevalley (request):
         'term':'food',
         'limit':50,
         'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'latitude': 37.749310,
+        'longitude':  -122.433147,
 
         }
 
@@ -663,7 +663,7 @@ def noevalley (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/noevalley.html', context=context)
  
 
 def northbeach (request):
@@ -671,9 +671,9 @@ def northbeach (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':1000,
+        'latitude': 37.804390, 
+        'longitude': -122.408304,
 
         }
 
@@ -688,7 +688,7 @@ def northbeach (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/northbeach.html', context=context)
  
 
 def oceanview (request):
@@ -697,8 +697,8 @@ def oceanview (request):
         'term':'food',
         'limit':50,
         'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'latitude': 37.717612, 
+        'longitude': -122.459150,
 
         }
 
@@ -713,7 +713,7 @@ def oceanview (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/oceanview.html', context=context)
  
 
 def outermission (request):
@@ -722,8 +722,8 @@ def outermission (request):
         'term':'food',
         'limit':50,
         'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'latitude': 37.725315, 
+        'longitude': -122.441747,
 
         }
 
@@ -738,7 +738,7 @@ def outermission (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/outermission.html', context=context)
  
 
 def pacificheights (request):
@@ -747,8 +747,8 @@ def pacificheights (request):
         'term':'food',
         'limit':50,
         'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'latitude': 37.792462,
+        'longitude':  -122.434437,
 
         }
 
@@ -763,7 +763,7 @@ def pacificheights (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/pacificheights.html', context=context)
  
 
 def parkmerced (request):
@@ -771,9 +771,9 @@ def parkmerced (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':750,
+        'latitude': 37.720648, 
+        'longitude': -122.486948,
 
         }
 
@@ -788,7 +788,7 @@ def parkmerced (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/parkmerced.html', context=context)
  
 
 def thepresidio (request):
@@ -797,8 +797,8 @@ def thepresidio (request):
         'term':'food',
         'limit':50,
         'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'latitude': 37.797867, 
+        'longitude': -122.464513,
 
         }
 
@@ -813,7 +813,7 @@ def thepresidio (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/thepresidio.html', context=context)
  
 
 def portrerohill (request):
@@ -821,9 +821,9 @@ def portrerohill (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':400,
+        'latitude': 37.758435, 
+        'longitude': -122.393235,
 
         }
 
@@ -838,7 +838,7 @@ def portrerohill (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/portrerohill.html', context=context)
  
 
 def richmonddistrict (request):
@@ -846,9 +846,9 @@ def richmonddistrict (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':1000,
+        'latitude': 37.780218,
+        'longitude':  -122.482365,
 
         }
 
@@ -863,7 +863,7 @@ def richmonddistrict (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/richmonddistrict.html', context=context)
  
 
 def russianhill (request):
@@ -872,8 +872,8 @@ def russianhill (request):
         'term':'food',
         'limit':50,
         'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'latitude': 37.801239, 
+        'longitude': -122.417800,
 
         }
 
@@ -888,7 +888,7 @@ def russianhill (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/russianhill.html', context=context)
  
 
 def soma (request):
@@ -896,9 +896,9 @@ def soma (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':1000,
+        'latitude': 37.778407, 
+        'longitude': -122.396539,
 
         }
 
@@ -913,7 +913,7 @@ def soma (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/soma.html', context=context)
  
 
 def sunsetdistrict (request):
@@ -946,9 +946,9 @@ def tenderloin (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':300,
+        'latitude': 37.784252, 
+        'longitude': -122.414426,
 
         }
 
@@ -963,7 +963,7 @@ def tenderloin (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/tenderloin.html', context=context)
  
 
 def twinpeaks (request):
@@ -971,9 +971,9 @@ def twinpeaks (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':200,
+        'latitude': 37.751860, 
+        'longitude': -122.449009,
 
         }
 
@@ -988,7 +988,7 @@ def twinpeaks (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/twinpeaks.html', context=context)
  
 
 def unionsquare (request):
@@ -996,9 +996,9 @@ def unionsquare (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':200,
+        'latitude': 37.787600, 
+        'longitude': -122.406583,
 
         }
 
@@ -1013,7 +1013,7 @@ def unionsquare (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/unionsquare.html', context=context)
  
 
 def westportal (request):
@@ -1021,9 +1021,9 @@ def westportal (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':300,
+        'latitude': 37.741321, 
+        'longitude': -122.466598,
 
         }
 
@@ -1038,7 +1038,7 @@ def westportal (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/westportal.html', context=context)
  
 
 def westernaddition (request):
@@ -1046,9 +1046,9 @@ def westernaddition (request):
     PARAMETERS = {
         'term':'food',
         'limit':50,
-        'radius':500,
-        'latitude': 37.777514,
-        'longitude': -122.432802,
+        'radius':350,
+        'latitude': 37.781568, 
+        'longitude': -122.433332,
 
         }
 
@@ -1063,5 +1063,5 @@ def westernaddition (request):
         'business_data':business_data['businesses']
     }
 
-    return render(request,'neighborhoods/alamosquare.html', context=context)
+    return render(request,'neighborhoods/westernaddition.html', context=context)
 
