@@ -41,6 +41,10 @@
     
     <br />
 <input type="submit" id="submit" />
+<form action = "{% url 'local_app:delete_all' %}" >
+  {% csrf_token %}
+  <input type="submit" value="Clear Trips" name="delete_all"/> 
+</form>
 </div>
 
 <div id="map" class="col-5"></div>
